@@ -14,7 +14,8 @@ end
 
 local M = {}
 
-local executable = Config:get_options().sf_executable
+--local executable = Config:get_options().sf_executable
+local executable = "sf.cmd"
 local active_file_path = nil
 
 local function push_to_org_callback(j)
@@ -223,7 +224,7 @@ M.push_to_org = function()
         return
     end
 
-    Util.clear_and_notify(string.format("Pushing %s to org %s...", file_name, default_username))
+    Util.clear_and_notify(string.format("Pushing2 %s to org %s...", file_name, default_username))
     local command =
         string.format("%s project deploy start --json -o %s", executable, default_username)
     if Config:get_options().file_manager.ignore_conflicts then

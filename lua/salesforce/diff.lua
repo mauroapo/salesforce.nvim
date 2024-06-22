@@ -15,7 +15,8 @@ end
 local M = {}
 
 local temp_dir
-local executable = Config:get_options().sf_executable
+--local executable = Config:get_options().sf_executable
+local executable = "sf.cmd"
 
 local function diff_callback(j)
     vim.schedule(function()
